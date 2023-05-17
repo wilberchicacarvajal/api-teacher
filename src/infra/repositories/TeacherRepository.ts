@@ -9,11 +9,7 @@ export class TeacherRepository implements ITeacherRepository {
     }
 
     public create(teacher: Teacher): Promise<Teacher> {
-        return this._prisma.teacher.create(
-            {
-                data: teacher
-            }
-        );
+        return this._prisma.teacher.create({ data: teacher });
     }
 
 }
